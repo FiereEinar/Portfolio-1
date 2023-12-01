@@ -10,6 +10,7 @@
 
 body {
     background-color: #020617;
+    position: relative;
 }
 
 nav {
@@ -111,18 +112,21 @@ nav > button:hover {
 }
 
 .main > .container > div > button {
-    background-color: #020617;
-    color: #fff;
     border: 1px solid aqua;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+
+    background-color: aqua;
+    color: black;
+    font-weight: 800;
+    box-shadow: 0 0 12px 0 rgba(68, 240, 234, 0.8);
     transition: all 0.2s ease;
 }
 
 .main > .container > div > button:hover {
-    background-color: aqua;
-    color: black;
+    background-color: #020617;
+    color: #fff;
     font-weight: 800;
     box-shadow: 0 0 12px 0 rgba(68, 240, 234, 0.8);
 }
@@ -145,12 +149,11 @@ nav > button:hover {
 
 .main > .container > .down {
     margin-bottom: 0;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .projects {
-    border: 1px solid white;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -165,17 +168,147 @@ nav > button:hover {
 
 .projects > .cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 60%;
+    position: relative;
 }
 
 .projects > .cardContainer > .card {
-    margin: 10px;
+    /* border: 1px solid aqua; */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 450px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* background: linear-gradient(145deg, #020619, #020515);
+    box-shadow:  20px 20px 60px #01030b,
+             -20px -20px 60px #030923; */
+    transition: all 0.2s ease;
+}
+
+.projects > .cardContainer > .blur {
+    position: absolute;
+    box-shadow: 0 0 200px 50px #00ffff8a;
+    z-index: -100;
+    top: 150px;
+}
+
+.projects > .cardContainer > .card > *:not(img) {
+    padding: 8px 15px;
 }
 
 .projects > .cardContainer > .card > img {
-    width: 600px;
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 0 20px 20px;
 }
+
+/* .projects > .cardContainer > .card > .blur {
+    position: absolute;
+    box-shadow: 0 0 200px 50px #00ffff8a;
+    z-index: -100;
+    bottom: 120px;
+} */
+
+.projects > .cardContainer > .card > a {
+    border: 1px solid #020617;
+    text-decoration: none;
+    color: aqua;
+    transition: all 0.2s ease;
+}
+
+.projects > .cardContainer > .card > a:hover {
+    border: 1px solid aqua;
+    border-radius: 8px;
+}
+
+.custom-shape-divider-top-1701433757 {
+    position: absolute;
+    bottom: 275px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1701433757 svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 110px;
+}
+
+.custom-shape-divider-top-1701433757 .shape-fill {
+    fill: #020617;
+    /* fill: white; */
+}
+
+footer {
+    background-color: #0d5a5a;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer > .icons {
+    border: 1px solid black;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer > .icons > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer > .otherLinks {
+    display: flex;
+    gap: 20px;
+}
+
+footer > .otherLinks > a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #0d5a5a;
+}
+
+footer > .otherLinks > a:hover {
+    border-bottom: 1px solid black;
+
+}
+
+footer > .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+footer > .copyright > img {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+footer > .copyright > p {
+    font-size: 0.8rem;
+}
+
 
 @media (max-width: 1200px) {
     .main > .container > img {
@@ -192,6 +325,9 @@ nav > button:hover {
         height: 50%;
         top: 80px;
     }
+    .projects > .cardContainer {
+        width: 70%;
+    }
 }
 
 
@@ -200,6 +336,9 @@ nav > button:hover {
         width: 30%;
         height: 55%;
         top: 80px;
+    }
+    .projects > .cardContainer {
+        width: 80%;
     }
 }
 
@@ -244,5 +383,8 @@ nav > button:hover {
         padding: 0;
         width: 70%;
         height: 35%;
+    }
+    .projects > .cardContainer {
+        width: 95%;
     }
 }
