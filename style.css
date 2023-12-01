@@ -151,6 +151,30 @@ nav > button:hover {
 .projects {
     border: 1px solid white;
     height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.projects > h1 {
+    margin: 20px;
+}
+
+.projects > .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    width: 100%;
+}
+
+.projects > .cardContainer > .card {
+    margin: 10px;
+}
+
+.projects > .cardContainer > .card > img {
+    width: 600px;
 }
 
 @media (max-width: 1200px) {
