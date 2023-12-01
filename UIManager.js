@@ -1,4 +1,5 @@
 import { home } from "./home.js"
+import { projects } from "./projects.js";
 
 const navButtons = document.querySelectorAll('nav ul > li');
 const parent = document.querySelector('.main');
@@ -16,28 +17,28 @@ function clearScreen() {
     });
 }
 
-init();
+// init();
 
 function init() {
     home.render(parent);
 }
 
-function addSelected(item) {
-    item.classList.add('selected');
-}
-
-function removeActiveClass() {
-    navButtons.forEach((btn) => {
-        btn.classList.remove('active');
-    });
-}
-
 function clickHandler(btn) {
     switch(btn.id) {
         case 'home':
-            clearScreen();
-            removeActiveClass();
+            handler(btn);
             home.render(parent);
             break;
+        case 'projects':
+            handler(btn);
+            projects.render(parent);
+            break;
+    }
+    function handler(btn) {
+        clearScreen();
+        navButtons.forEach((button) => {
+            button.classList.remove('selected');
+        });
+        btn.classList.add('selected');
     }
 }

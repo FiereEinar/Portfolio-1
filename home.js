@@ -7,6 +7,13 @@ export const home = {
         const content = document.createElement('div');
         container.appendChild(content);
 
+        const span1 = document.createElement('span');
+        span1.className = 'blur';
+        const span2 = document.createElement('span');
+        span2.className = 'blur';
+        content.appendChild(span1);
+        content.appendChild(span2);
+
         const header = document.createElement('h1');
         header.innerHTML = "Hi! I'm Nick!";
         content.appendChild(header);
@@ -35,6 +42,7 @@ export const home = {
         container.appendChild(img);
 
         setTimeout(() => {
+            
             let up = true;
             let showCareer = true;
             container.classList.add('show');
@@ -46,25 +54,16 @@ export const home = {
 
             let career = 'an aspiring Full Stack Developer';
             let college = 'a 1st year College Student';
-            
-            
+
+            typeToScreen(career);
+
             const textInterval = setInterval(() => {
                 let i = 0;
                 let whatToShow = '';
-                // timer = 800;
                 showCareer = !showCareer;
                 showCareer ? whatToShow = career : whatToShow = college;
 
-                const typeInterval = setInterval(() => {
-                    text.innerHTML += whatToShow[i];
-                    i++;
-                    if (i == whatToShow.length) {
-                        setTimeout(() => {
-                            clearText(whatToShow);
-                        }, 800);
-                        clearInterval(typeInterval);
-                    }
-                }, 100);
+                typeToScreen(whatToShow);
             }, 7500);
 
             function clearText(text) {
@@ -72,10 +71,23 @@ export const home = {
                 let word = text
                 const clearTextInterval = setInterval(() => {
                     word = word.slice(0, -1);
-                    console.log(word);
                     domText.innerHTML = word;
                     if (word.length == 0) {
                         clearInterval(clearTextInterval);
+                    }
+                }, 100);
+            }
+
+            function typeToScreen(word) {
+                let i = 0;
+                const typeInterval = setInterval(() => {
+                    text.innerHTML += word[i];
+                    i++;
+                    if (i == word.length) {
+                        setTimeout(() => {
+                            clearText(word);
+                        }, 800);
+                        clearInterval(typeInterval);
                     }
                 }, 100);
             }
