@@ -52,8 +52,10 @@ setTimeout(() => {
 
 function typeToScreen(word) {
     let i = 0;
+    let textTemp = '';
     const typeInterval = setInterval(() => {
-        text.innerHTML += word[i];
+    	textTemp += word[i];
+        text.innerHTML = textTemp + '|';
         i++;
         if (i == word.length) {
             setTimeout(() => {
@@ -70,7 +72,7 @@ function clearText(text) {
     let word = text
     const clearTextInterval = setInterval(() => {
         word = word.slice(0, -1);
-        domText.innerHTML = word;
+        domText.innerHTML = word + '|';
         if (word.length == 0) {
             clearInterval(clearTextInterval);
         }
