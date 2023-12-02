@@ -11,6 +11,7 @@
 body {
     background-color: #020617;
     position: relative;
+    
 }
 
 nav {
@@ -21,6 +22,14 @@ nav {
     align-items: center;
     color: #fff;
     padding: 0 60px;
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.show {
+    transform: translateY(1px);
+    opacity: 1;
 }
 
 nav > ul {
@@ -97,7 +106,16 @@ nav > button:hover {
     gap: 8px;
     position: relative;
     margin-left: 10%;
+    /* transform: translateX(-150%); */
+    opacity: 0;
+    transition: all 3s ease;
 }
+
+/* .main > .container > .show {
+    transform: translateX(0%);
+    opacity: 1;
+} */
+
 
 .main > .container > div > .aboutContainer {
     display: flex;
@@ -117,16 +135,16 @@ nav > button:hover {
     padding: 5px 10px;
     cursor: pointer;
 
-    background-color: aqua;
-    color: black;
-    font-weight: 800;
+    background-color: #020617;
+    color: #fff;
+    /* font-weight: 800; */
     box-shadow: 0 0 12px 0 rgba(68, 240, 234, 0.8);
     transition: all 0.2s ease;
 }
 
 .main > .container > div > button:hover {
-    background-color: #020617;
-    color: #fff;
+    background-color: aqua;
+    color: black;
     font-weight: 800;
     box-shadow: 0 0 12px 0 rgba(68, 240, 234, 0.8);
 }
@@ -139,15 +157,24 @@ nav > button:hover {
     object-position: center;
     filter: contrast(1.4);
     position: absolute;
-    transition: all 1s ease-in-out;
+    /* transform: translateX(100%); */
+    opacity: 0;
+    transition: all 3s ease;
 }
 
-.main > .container > .up {
+.main > .container > .show, 
+.main > .container > div + .show {
+    /* transform: translateX(0%); */
+    opacity: 1;
+}
+
+
+.main > .container > #up {
     margin-top: 0;
     /* margin-bottom: 100px; */
 }
 
-.main > .container > .down {
+.main > .container > #down {
     margin-bottom: 0;
     margin-top: 10px;
 }
@@ -165,6 +192,7 @@ nav > button:hover {
 
 .projects > h1 {
     margin: 20px;
+    
 }
 
 .projects > .cardContainer {
@@ -172,22 +200,36 @@ nav > button:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: 60%;
     position: relative;
+    overflow: hidden;
 }
 
 .projects > .cardContainer > .card {
-    /* border: 1px solid aqua; */
+    border-top: 2px solid aqua;
     margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    height: 450px;
+    height: 500px;
     /* border-radius: 10px; */
     overflow: hidden;
     /* background: linear-gradient(145deg, #020619, #020515);
     box-shadow:  20px 20px 60px #01030b,
              -20px -20px 60px #030923; */
-    transition: all 0.2s ease;
+    transition: all 1s ease;
+}
+
+.projects > .cardContainer > .left {
+    transform: translateX(-250px);
+    opacity: 0;
+} 
+.projects > .cardContainer > .right {
+    transform: translateX(250px);
+    opacity: 0;
+} 
+.projects > .cardContainer .show {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .projects > .cardContainer > .blur {
@@ -250,6 +292,46 @@ nav > button:hover {
     /* fill: white; */
 }
 
+/* .about {
+    
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.about > .detailsContainer {
+    border: 1px solid white;
+    display: flex;
+    width: 600px;
+    
+}
+
+.about > .detailsContainer > .imgsContainer {
+    border: 1px solid white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.about > .detailsContainer > .imgsContainer > .shape {
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    background-color: #0d5a5a;
+    transform: rotate();
+}
+
+.about > .detailsContainer > .imgsContainer > img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+} */
+
+
 footer {
     background-color: #0d5a5a;
     height: 50vh;
@@ -263,7 +345,6 @@ footer {
 }
 
 footer > .icons {
-    border: 1px solid black;
     width: 300px;
     height: 50px;
     display: flex;
