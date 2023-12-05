@@ -69,7 +69,7 @@ nav > button:hover {
 }
 
 .main {
-    height: calc(100vh - 60px);
+    height: calc(100vh + 60px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -106,9 +106,9 @@ nav > button:hover {
     gap: 8px;
     position: relative;
     margin-left: 10%;
-    /* transform: translateX(-150%); */
+    transform: translateX(-250px);
     opacity: 0;
-    transition: all 3s ease;
+    transition: all 1.5s ease;
 }
 
 /* .main > .container > .show {
@@ -157,14 +157,14 @@ nav > button:hover {
     object-position: center;
     filter: contrast(1.4);
     position: absolute;
-    /* transform: translateX(100%); */
+    transform: translateX(250px);
     opacity: 0;
-    transition: all 3s ease;
+    transition: all 1.5s ease;
 }
 
 .main > .container > .show, 
 .main > .container > div + .show {
-    /* transform: translateX(0%); */
+    transform: translateX(0);
     opacity: 1;
 }
 
@@ -232,11 +232,12 @@ nav > button:hover {
     opacity: 1;
 }
 
-.projects > .cardContainer > .blur {
+.projects > .blur1 {
     position: absolute;
     box-shadow: 0 0 200px 50px #00ffff8a;
     z-index: -100;
-    top: 150px;
+    left: 400px;
+    top: 1000px;
 }
 
 .projects > .blur {
@@ -272,12 +273,13 @@ nav > button:hover {
     border: 1px solid #020617;
     text-decoration: none;
     color: aqua;
+    border-radius: 8px;
     transition: all 0.2s ease;
 }
 
 .projects > .cardContainer > .card > a:hover {
     border: 1px solid aqua;
-    border-radius: 8px;
+    
 }
 
 .custom-shape-divider-top-1701433757 {
