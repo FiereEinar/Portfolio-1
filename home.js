@@ -1,4 +1,5 @@
 const img = document.querySelector('.container > img');
+const mainContainer = document.querySelector('.container');
 const text = document.querySelector('.container > div > .aboutContainer > .domText');
 const main = document.querySelector('.main > .container > div');
 const mainImg = document.querySelector('.main > .container > img');
@@ -17,6 +18,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(main);
+observer.observe(mainContainer);
 observer.observe(mainImg);
 observer.observe(nav);
 leftCards.forEach((card) => {
