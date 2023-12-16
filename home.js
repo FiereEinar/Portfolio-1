@@ -6,6 +6,9 @@ const mainImg = document.querySelector('.main > .container > img');
 const nav = document.querySelector('.navBar');
 const leftCards = document.querySelectorAll('.cardContainer > .left');
 const rightCards = document.querySelectorAll('.cardContainer > .right');
+const imgsContainer = document.querySelector('.imgsContainer');
+const details = document.querySelector('.details');
+const contact = document.querySelector('.contact');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -21,12 +24,11 @@ observer.observe(main);
 observer.observe(mainContainer);
 observer.observe(mainImg);
 observer.observe(nav);
-leftCards.forEach((card) => {
-    observer.observe(card);
-});
-rightCards.forEach((card) => {
-    observer.observe(card);
-});
+observer.observe(imgsContainer);
+observer.observe(details);
+observer.observe(contact);
+leftCards.forEach((card) => observer.observe(card));
+rightCards.forEach((card) => observer.observe(card));
 
 setTimeout(() => {
     let up = true;
