@@ -108,7 +108,6 @@ nav > button:hover {
     align-items: flex-start;
     color: #fff;
     padding: 20px;
-    font-size: 1.2rem;
     gap: 12px;
     position: relative;
     margin-left: 10%;
@@ -561,7 +560,7 @@ footer + div {
     to {
         border-radius: 53% 47% 68% 32% / 40% 40% 60% 60% ;
     }
-  }
+}
   
 
 
@@ -647,14 +646,18 @@ footer + div {
     	padding: 0;
     }
     .projects > .blur {
-        bottom: 1700px;
+        bottom: 2100px;
     }
     .about > .detailsContainer {
         flex-direction: column;
         width: 100%;
     }
     .about > .detailsContainer > .imgsContainer > .shape {
-        height: 350px;
+        height: 275px;
+    }
+    .about > .detailsContainer > .details > .blurB {
+    	top: 50px;
+    	left: 10px
     }
     .about > .detailsContainer > .imgsContainer,
     .about > .detailsContainer > .details {
