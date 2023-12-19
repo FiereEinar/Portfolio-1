@@ -1,3 +1,5 @@
+import { observer } from '../js/observer.js';
+
 const img = document.querySelector('.container > img');
 const mainContainer = document.querySelector('.container');
 const text = document.querySelector('.domText');
@@ -10,15 +12,16 @@ const imgsContainer = document.querySelector('.imgsContainer');
 const details = document.querySelector('.details');
 const contact = document.querySelector('.contact');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
+
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('show');
+//         } else {
+//             entry.target.classList.remove('show');
+//         }
+//     });
+// });
 
 observer.observe(main);
 observer.observe(mainContainer);
@@ -30,27 +33,30 @@ observer.observe(contact);
 leftCards.forEach((card) => observer.observe(card));
 rightCards.forEach((card) => observer.observe(card));
 
-setTimeout(() => {
-    let up = true;
-    let showCareer = false;
-    let whatToShow;
 
-    // const imgInterval = setInterval(() => {
-    //     up = !up;
-    //     up ? img.id = 'up' : img.id = 'down';
-    // }, 1000);
+const navButton = document.querySelector('.navButton');
+const ul = document.querySelector('.navBar > ul');
+
+navButton.addEventListener('click', () => {
+	ul.classList.toggle('showUL');
+});
+
+
+setTimeout(() => {
+    let textSwitch = false;
+    let word;
 
     typeToScreen('a 1st year College Student');
 
     const textInterval = setInterval(() => {
         let i = 0;
         
-        showCareer = !showCareer;
-        showCareer 
-        ? whatToShow = 'an aspiring Full Stack Developer' 
-        : whatToShow = 'a 1st year College Student';
+        textSwitch = !textSwitch;
+        textSwitch 
+        ? word = 'an aspiring Full Stack Developer' 
+        : word = 'a 1st year College Student';
 
-        typeToScreen(whatToShow);
+        typeToScreen(word);
     }, 7500);
 }, 500);
 
@@ -82,10 +88,3 @@ function clearText(text) {
         }
     }, 100);
 }
-
-const navButton = document.querySelector('.navButton');
-const ul = document.querySelector('.navBar > ul');
-
-navButton.addEventListener('click', () => {
-	ul.classList.toggle('showUL');
-});
