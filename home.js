@@ -1,6 +1,6 @@
 const img = document.querySelector('.container > img');
 const mainContainer = document.querySelector('.container');
-const text = document.querySelector('.container > div > .aboutContainer > .domText');
+const text = document.querySelector('.domText');
 const main = document.querySelector('.main > .container > div');
 const mainImg = document.querySelector('.main > .container > img');
 const nav = document.querySelector('.navBar');
@@ -35,10 +35,10 @@ setTimeout(() => {
     let showCareer = false;
     let whatToShow;
 
-    const imgInterval = setInterval(() => {
-        up = !up;
-        up ? img.id = 'up' : img.id = 'down';
-    }, 1000);
+    // const imgInterval = setInterval(() => {
+    //     up = !up;
+    //     up ? img.id = 'up' : img.id = 'down';
+    // }, 1000);
 
     typeToScreen('a 1st year College Student');
 
@@ -82,3 +82,10 @@ function clearText(text) {
         }
     }, 100);
 }
+
+const navButton = document.querySelector('.navButton');
+const ul = document.querySelector('.navBar > ul');
+
+navButton.addEventListener('click', () => {
+	ul.classList.toggle('showUL');
+});
