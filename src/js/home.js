@@ -9,7 +9,7 @@ const nav = document.querySelector('.navBar');
 // const rightCards = document.querySelectorAll('.cardContainer > .right');
 const imgsContainer = document.querySelector('.imgsContainer');
 const details = document.querySelector('.details');
-const contact = document.querySelector('.contact');
+// const contact = document.querySelector('.contact');
 
 
 // const observer = new IntersectionObserver((entries) => {
@@ -28,7 +28,7 @@ observer.observe(mainImg);
 observer.observe(nav);
 observer.observe(imgsContainer);
 observer.observe(details);
-observer.observe(contact);
+// observer.observe(contact);
 // leftCards.forEach((card) => observer.observe(card));
 // rightCards.forEach((card) => observer.observe(card));
 

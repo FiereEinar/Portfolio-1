@@ -1,0 +1,159 @@
+@import '../css/style.css';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.about > .detailsContainer {
+    display: flex;
+    width: 80%;
+}
+
+.about > .detailsContainer > .imgsContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-200px);
+    padding: 20px;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
+}
+
+.about > .detailsContainer > .details {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    gap: 15px;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
+}
+
+.about > .detailsContainer > .show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about > .detailsContainer > .details > .blurB {
+    position: absolute;
+    box-shadow: 0 0 900px 50px #00ffff8a;
+    z-index: -100;
+    left: 60px;
+    top: 180px;
+}
+
+.about > .detailsContainer > .imgsContainer > .shape {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    width: 80%  ;
+    height: 80%;
+    background-color: #0d5a5a;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    animation: 2.5s infinite alternate blob;
+}
+
+.imgsContainer > .shape + div > div {
+	display: flex;
+	gap: 10px;
+}
+
+.imgsContainer > .shape + div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	gap: 10px;
+}
+
+.imgsContainer > .shape + div > div > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.imgsContainer > .shape + div > div > a img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.about > .detailsContainer > .imgsContainer > .shape  img {
+    width: 80%;
+    height: 85%;
+}
+
+.about .detailsContainer .details .techs {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.about .detailsContainer .details .techs > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.about .detailsContainer .details .techs > div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes blob {
+    from {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    }
+    to {
+        border-radius: 53% 47% 68% 32% / 40% 40% 60% 60% ;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .about > .detailsContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+    .about > .detailsContainer > .imgsContainer > .shape {
+        height: 275px;
+    }
+    .about > .detailsContainer > .details > .blurB {
+    	top: 50px;
+    	left: 10px
+    }
+    .about > .detailsContainer > .imgsContainer,
+    .about > .detailsContainer > .details {
+        width: 100%;
+    }
+    .details > h1, 
+    .details > h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
