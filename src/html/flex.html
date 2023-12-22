@@ -1,31 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Flex Page</title>
-	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-	
+
 	<nav id="home" class="navBar">
-    	<div class="logo">
-    		<img src="" alt="">
-    		<h1>{ Nick.dev }</h1>
-    	</div>
-    	<div>
-    		<img class="navButton" src="" alt="">
-    	</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="src/html/blog.html">Blog</a></li>
-            <li><a href="src/html/flex.html">Flex</a></li>
-        </ul>
-    </nav>
-	
-	
+		<div class="logo">
+			<img src="" alt="">
+			<h1>{ Nick.dev }</h1>
+		</div>
+		<div>
+			<img class="navButton" src="" alt="">
+		</div>
+		<ul>
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="src/html/blog.html">Blog</a></li>
+			<li><a class="active" href="flex.html">Flex</a></li>
+		</ul>
+	</nav>
+
+	<div class="main">
+		<span class="blurA"></span>
+		<span class="blurA"></span>
+		<div class="container">
+			<div>
+
+				<h1>Hi! I'm Nick!</h1>
+				<div class="aboutContainer">
+					<h4>And I'm </h4>
+					<h4 class="domText"> </h4>
+				</div>
+				<p>
+					Transforming design concepts into engaging online realities. I specialize
+					in creating dynamic web applications that captivate users
+					and enhance your digital presence. Prepared to turn your
+					visions into reality for your business!
+				</p>
+				<a href="#projects">View Projects</a>
+			</div>
+			<img src="/imgs/hero-removebg.png" alt="logo">
+		</div>
+		<span class="blur"></span>
+		<span class="blur"></span>
+	</div>
+
+	<div id="projects" class="projects">
+		<h1>Projects</h1>
+		<span class="blur1"></span>
+		<span class="blur1"></span>
+		<div class="cardContainer">
+
+			<div class="card left">
+				<img src="/imgs/todo.png" alt="">
+				<h4>Todo App</h4>
+				<p>
+					This project is made to practice the use of programming concepts
+					such as PubSub pattern, CRUD (Create, Read, Update, Delete), and
+					ES6 modular programming pattern. This project also uses date-fns
+					library to show dates in more informative way. There will also be
+					localStorage implemented in this project. THIS PROJECT IS NOT DONE YET.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Todo-App-Site/">Visit Live Preview</a>
+			</div>
+			<div class="card right">
+				<img src="/imgs/restaurant-page.png" alt="">
+				<h4>Restaurant Page</h4>
+				<p>
+					This project aims to practice the modular programming pattern of Javascript,
+					Dynamic Multi Page Web Application with JS, Practicing the
+					use of module bundler (Webpack), managing libraries through
+					NPM and configurations in JSON files.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Restaurant-Page/">Visit Live Preview</a>
+			</div>
+			<div class="card left">
+				<img src="/imgs/tictactoe.png" alt="">
+				<h4>Tic-Tac-Toe</h4>
+				<p>
+					This project aims to practice the ES5 programming pattern in
+					Javascript and how each components communicates with other
+					components.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Tic-Tac-Toe/">Visit Live Preview</a>
+			</div>
+			<div class="card right">
+				<img src="/imgs/diary.png" alt="">
+				<h4>Diary App</h4>
+				<p>
+					This practices the use of classes to create objects and rendering
+					it in the DOM (Document Object Model) in real time. This project also has a localStorage
+					support, the diaries entered by users will be saved in their devices.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Library/">Visit Live Preview</a>
+			</div>
+			<div class="card left">
+				<img src="/imgs/sketch.png" alt="">
+				<h4>Sketchpad</h4>
+				<p>
+					This project was the introductory project of DOM (Document Object Model)
+					Manipulation which is an essential skill to be able to create
+					dynamic web applications. Unfortunately this app is not resposive on
+					mobile devices as it requires a mouse to draw.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Etch-A-Sketch/">Visit Live Preview</a>
+			</div>
+			<div class="card right">
+				<img src="/imgs/rock-paper-scissors.png" alt="">
+				<h4>Rock Paper Scissors</h4>
+				<p>
+					This is the first project that I made. This is where I learned how
+					Javascript can manipulate the DOM. Making this project was so fun
+					because it was my first time making a project that involves some logic.
+				</p>
+				<a target="_blank" href="https://fiereeinar.github.io/Rock-Paper-Scissors/">Visit Live Preview</a>
+			</div>
+		</div>
+		<span class="blur"></span>
+		<span class="blur"></span>
+	</div>
+
+
+
 	<script defer type="module" src="../js/flex.js"></script>
 </body>
 

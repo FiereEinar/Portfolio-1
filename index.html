@@ -1,247 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="src/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
-    
-   <nav id="home" class="navBar">
-   	<div class="logo">
-   		<img src="" alt="">
-   		<h1>{ Nick.dev }</h1>
-   	</div>
-   	<div>
-   		<img class="navButton" src="" alt="">
-   	</div>
-       <ul>
-           <li><a href="index.html">Home</a></li>
-           <li><a href="src/html/blog.html">Blog</a></li>
-           <li><a href="src/html/flex.html">Flex</a></li>
-       </ul>
-   </nav>
 
-    <div class="main">
-    	<span class="blurA"></span>
-        <span class="blurA"></span>
-        <div class="container">
-            <div>
-                
-                <h1>Hi! I'm Nick!</h1>
-                <div class="aboutContainer">
-                    <h4>And I'm </h4>
-                    <h4 class="domText"> </h4>
-                </div>
-                <p>
-                    Transforming design concepts into engaging online realities. I specialize 
-                    in creating dynamic web applications that captivate users 
-                    and enhance your digital presence. Prepared to turn your 
-                    visions into reality for your business!
-                </p>
-                <a href="#projects">View Projects</a>
-            </div>
-            <img src="imgs/hero-removebg.png" alt="logo">
-        </div>
-        <span class="blur"></span>
-        <span class="blur"></span>
-    </div>
+	<nav id="home" class="navBar">
+		<div class="logo">
+			<img src="" alt="">
+			<h1>{ Nick.dev }</h1>
+		</div>
+		<div>
+			<img class="navButton" src="" alt="">
+		</div>
+		<ul>
+			<li><a class="active" href="index.html">Home</a></li>
+			<li><a href="src/html/blog.html">Blog</a></li>
+			<li><a href="src/html/flex.html">Flex</a></li>
+		</ul>
+	</nav>
 
-    <div id="projects" class="projects">
-        <h1>Projects</h1>
-        <span class="blur1"></span>
-        <span class="blur1"></span>
-        <div class="cardContainer">
-            
-            <div class="card left">
-                <img src="imgs/todo.png" alt="" >
-                <h4>Todo App</h4>
-                <p>
-                    This project is made to practice the use of programming concepts 
-                    such as PubSub pattern, CRUD (Create, Read, Update, Delete), and 
-                    ES6 modular programming pattern. This project also uses date-fns 
-                    library to show dates in more informative way. There will also be 
-                    localStorage implemented in this project. THIS PROJECT IS NOT DONE YET.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Todo-App-Site/">Visit Live Preview</a>
-            </div>
-            <div class="card right">
-                <img src="imgs/restaurant-page.png" alt="">
-                <h4>Restaurant Page</h4>
-                <p>
-                    This project aims to practice the modular programming pattern of Javascript, 
-                    Dynamic Multi Page Web Application with JS, Practicing the 
-                    use of module bundler (Webpack), managing libraries through
-                    NPM and configurations in JSON files.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Restaurant-Page/">Visit Live Preview</a>
-            </div>
-            <div class="card left">
-                <img src="imgs/tictactoe.png" alt="">
-                <h4>Tic-Tac-Toe</h4>
-                <p>
-                    This project aims to practice the ES5 programming pattern in 
-                    Javascript and how each components communicates with other 
-                    components.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Tic-Tac-Toe/">Visit Live Preview</a>
-            </div>
-            <div class="card right">
-                <img src="imgs/diary.png" alt="">
-                <h4>Diary App</h4>
-                <p>
-                    This practices the use of classes to create objects and rendering 
-                    it in the DOM (Document Object Model) in real time. This project also has a localStorage 
-                    support, the diaries entered by users will be saved in their devices.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Library/">Visit Live Preview</a>
-            </div>
-            <div class="card left">
-                <img src="imgs/sketch.png" alt="">
-                <h4>Sketchpad</h4>
-                <p>
-                    This project was the introductory project of DOM (Document Object Model) 
-                    Manipulation which is an essential skill to be able to create 
-                    dynamic web applications. Unfortunately this app is not resposive on 
-                    mobile devices as it requires a mouse to draw.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Etch-A-Sketch/">Visit Live Preview</a>
-            </div>
-            <div class="card right">
-                <img src="imgs/rock-paper-scissors.png" alt="">
-                <h4>Rock Paper Scissors</h4>
-                <p>
-                    This is the first project that I made. This is where I learned how 
-                    Javascript can manipulate the DOM. Making this project was so fun 
-                    because it was my first time making a project that involves some logic.
-                </p>
-                <a target="_blank" href="https://fiereeinar.github.io/Rock-Paper-Scissors/">Visit Live Preview</a>
-            </div>
-        </div>
-        <span class="blur"></span>
-        <span class="blur"></span>
-    </div>
+	<div class="main">
+		<span class="blurA"></span>
+		<span class="blurA"></span>
+		<div class="container">
+			<div>
 
-    <div class="about">
-        <div class="detailsContainer">
-            <div class="imgsContainer">
-                <div class="shape">
-                    <img src="imgs/profile.png" alt="">
-                </div>
-            </div>
-            <div class="details">
-                <span class="blurB"></span>
-                <span class="blurB"></span>
-                <h1>About Me</h1>
-                <p>
-                    My name is Nick Xylan Melloria and I want to be a Full Stack Developer. 
-                    I am 19 years old living in Legacie Country Homes, San Jose, Malaybalay City. 
-                    My current hobbies are Calisthenics, coding, and biking. I am very passionate 
-                    about becoming a Full Stack Developer that I am currently taking an online course 
-                    on top of being enrolled in college to further advance my skills in web development.
-                </p>
-                <h2>Technical Skills</h2>
-                <div class="techs">
-                    <div>
-                        <img src="imgs/js.png" alt="">
-                        <h4>Javascript</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/html2.webp" alt="">
-                        <h4>HTML</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/css.jpg" alt="">
-                        <h4>CSS</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/node-js.png" alt="">
-                        <h4>Node.js</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/webpack.png" alt="">
-                        <h4>Webpack</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/tailwind.png" alt="">
-                        <h4>Tailwind</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/git.png" alt="">
-                        <h4>Git</h4>
-                    </div>
-                    <div>
-                        <img src="imgs/github.png" alt="">
-                        <h4>Github</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+				<h1>Hi! I'm Nick!</h1>
+				<div class="aboutContainer">
+					<h4>And I'm </h4>
+					<h4 class="domText"> </h4>
+				</div>
+				<p>
+					Transforming design concepts into engaging online realities. I specialize
+					in creating dynamic web applications that captivate users
+					and enhance your digital presence. Prepared to turn your
+					visions into reality for your business!
+				</p>
+				<a href="#about">Learn More</a>
+			</div>
+			<img src="/imgs/hero-removebg.png" alt="logo">
+		</div>
+		<span class="blur"></span>
+		<span class="blur"></span>
+	</div>
 
-    <footer id="contacts">
-    	<div class="custom-shape-divider-top-1701433757">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-    	</div>
+	<div id="about" class="about">
+		<div class="detailsContainer">
+			<div class="imgsContainer">
+				<div class="shape">
+					<img src="imgs/profile.png" alt="">
+				</div>
 
-        <div class="contact">
-            <div>
-                <h1>Contacts</h1>
-                <div class="links">
-                    <div>
-                        <img src="imgs/mail.png" alt="">
-                        <p>2301106533@student.buksu.edu.ph</p>
-                    </div>
-                    <div>
-                        <img src="imgs/hastag.png" alt="">
-                        <p>+63 9XXXXXXXXX</p>
-                    </div>
-                </div>
-                <h1>Socials</h1>
-                <div class="icons">
-                    <a target="_blank" href="https://github.com/FiereEinar">
-                        <img src="imgs/github.png" alt="">
-                    </a>
-                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100009455672353&mibextid=ZbWKwL">
-                        <img src="imgs/facebook.png" alt="">
-                    </a>
-                    <a target="_blank" href="https://www.tiktok.com/@nickmours11?_t=8hqRRvMswDa&_r=1">
-                        <img src="imgs/tiktok.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <form>
-                <h1>Message Me</h1>
-                <fieldset>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea placeholder="Message" name="message" id="" cols="30" rows="5"></textarea>
-                    <button>Submit</button>
-                </fieldset>
-            </form>
-        </div>
+				<div>
+					<h1>Socials</h1>
+					<div>
+						<a target="_blank" href="https://github.com/FiereEinar">
+							<img src="imgs/github.png" alt="">
+							<h4>Github</h4>
+						</a>
+						<a target="_blank" href="https://www.facebook.com/profile.php?id=100009455672353&mibextid=ZbWKwL">
+							<img src="imgs/facebook.png" alt="">
+							<h4>Facebook</h4>
+						</a>
+						<a target="_blank" href="https://www.instagram.com/fiere.xy?igshid=OGQ5ZDc2ODk2ZA==">
+							<img src="" alt="">
+							<h4>Instagram</h4>
+						</a>
+						<a target="_blank" href="https://www.tiktok.com/@nickmours11?_t=8hqRRvMswDa&_r=1">
+							<img src="imgs/tiktok.png" alt="">
+							<h4>Tiktok</h4>
+						</a>
+					</div>
 
-        <div class="custom-shape-divider-bottom-1702705053">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </footer>
+				</div>
+			</div>
+			<div class="details">
+				<span class="blurB"></span>
+				<span class="blurB"></span>
+				<h1>About Me</h1>
+				<p>
+					My name is Nick Xylan Melloria and I want to be a Full Stack Developer.
+					I am 19 years old living in Legacie Country Homes, San Jose, Malaybalay City.
+					My current hobbies are Calisthenics, coding, and biking. I am very passionate
+					about becoming a Full Stack Developer that I am currently taking an online course
+					on top of being enrolled in college to further advance my skills in web development.
+				</p>
+				<h2>Technical Skills</h2>
+				<div class="techs">
+					<div>
+						<img src="imgs/js.png" alt="">
+						<h4>Javascript</h4>
+					</div>
+					<div>
+						<img src="imgs/html2.webp" alt="">
+						<h4>HTML</h4>
+					</div>
+					<div>
+						<img src="imgs/css.jpg" alt="">
+						<h4>CSS</h4>
+					</div>
+					<div>
+						<img src="imgs/node-js.png" alt="">
+						<h4>Node.js</h4>
+					</div>
+					<div>
+						<img src="imgs/webpack.png" alt="">
+						<h4>Webpack</h4>
+					</div>
+					<div>
+						<img src="imgs/tailwind.png" alt="">
+						<h4>Tailwind</h4>
+					</div>
+					<div>
+						<img src="imgs/git.png" alt="">
+						<h4>Git</h4>
+					</div>
+					<div>
+						<img src="imgs/github.png" alt="">
+						<h4>Github</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div>
-        <p> &copy; 2023 Nick Xylan Melloria</p>
-    </div>
+	<footer id="contacts">
+		<div class="custom-shape-divider-top-1701433757">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+				<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+				<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+			</svg>
+		</div>
 
-    <script defer type="module" src="src/js/home.js"></script>
+		<div class="contact">
+			<div>
+				<h1>Contacts</h1>
+				<div class="links">
+					<div>
+						<img src="imgs/mail.png" alt="">
+						<p>2301106533@student.buksu.edu.ph</p>
+					</div>
+					<div>
+						<img src="imgs/hastag.png" alt="">
+						<p>+63 9XXXXXXXXX</p>
+					</div>
+				</div>
+				<h1>Socials</h1>
+				<div class="icons">
+					<a target="_blank" href="https://github.com/FiereEinar">
+						<img src="imgs/github.png" alt="">
+					</a>
+					<a target="_blank" href="https://www.facebook.com/profile.php?id=100009455672353&mibextid=ZbWKwL">
+						<img src="imgs/facebook.png" alt="">
+					</a>
+					<a target="_blank" href="https://www.tiktok.com/@nickmours11?_t=8hqRRvMswDa&_r=1">
+						<img src="imgs/tiktok.png" alt="">
+					</a>
+				</div>
+			</div>
+			<form>
+				<h1>Message Me</h1>
+				<fieldset>
+					<input type="text" placeholder="Name">
+					<input type="email" placeholder="Email">
+					<textarea placeholder="Message" name="message" id="" cols="30" rows="5"></textarea>
+					<button>Submit</button>
+				</fieldset>
+			</form>
+		</div>
+
+		<div class="custom-shape-divider-bottom-1702705053">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+				<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+				<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</footer>
+
+	<div>
+		<p> &copy; 2023 Nick Xylan Melloria</p>
+	</div>
+
+	<script defer type="module" src="src/js/home.js"></script>
 </body>
-</html>
 
+</html>
