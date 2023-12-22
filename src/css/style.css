@@ -31,7 +31,7 @@ nav {
     transform: translateY(-40px);
     opacity: 0;
     z-index: 100;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 .show {
@@ -43,11 +43,13 @@ nav .logo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    gap: 8px;
 }
 
 nav .logo > img {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
+    filter: invert(1);
 }
 
 nav .logo + div {
@@ -57,6 +59,8 @@ nav .logo + div {
 nav .logo + div > img { 
 	width: 25px;
 	height: 25px;
+    filter: invert(1);
+    cursor: pointer;
 }
 
 nav > ul {
@@ -107,12 +111,7 @@ nav > ul > li > a:hover {
     display: flex;
     position: relative;
     overflow-x: clip;
-    transition: all 0.5s ease-out;
 }
-
-/* main > .show {
-	overflow: visible;
-} */
 
 .main > .container > div {
     width: 50%;
@@ -128,7 +127,7 @@ nav > ul > li > a:hover {
     margin-left: 10%;
     transform: translateX(-250px);
     opacity: 0;
-    transition: all 1.5s ease;
+    transition: all 1.5s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 /* .main > .container > .show {
@@ -207,7 +206,7 @@ nav > ul > li > a:hover {
 }
 .main > .container > div + .show {
 
-    animation: dash 1.5s ease 1, upDown 2s linear infinite;
+    animation: dash 1.5s cubic-bezier(0.6, 0.02, 0.08, 1.03) 1, upDown 2s linear infinite;
 }
 
 
@@ -259,7 +258,7 @@ nav > ul > li > a:hover {
     /* background: linear-gradient(145deg, #020619, #020515);
     box-shadow:  20px 20px 60px #01030b,
              -20px -20px 60px #030923; */
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 .projects > .cardContainer > .left {
@@ -325,7 +324,7 @@ nav > ul > li > a:hover {
     
 }
 
-.custom-shape-divider-top-1701433757 {
+.wave-1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -334,14 +333,14 @@ nav > ul > li > a:hover {
     line-height: 0;
 }
 
-.custom-shape-divider-top-1701433757 svg {
+.wave-1 svg {
     position: relative;
     display: block;
     width: calc(138% + 1.3px);
     height: 110px;
 }
 
-.custom-shape-divider-top-1701433757 .shape-fill {
+.wave-1 .shape-fill {
     fill: #020617;
     /* fill: white; */
 }
@@ -354,7 +353,7 @@ nav > ul > li > a:hover {
     color: #fff;
     min-height: 100vh;
     margin: 0;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     overflow: hidden;
 }
 
@@ -375,7 +374,7 @@ nav > ul > li > a:hover {
     transform: translateX(-200px);
     padding: 20px;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 .about > .detailsContainer > .details {
@@ -389,7 +388,7 @@ nav > ul > li > a:hover {
     gap: 15px;
     transform: translateX(200px);
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 .about > .detailsContainer > .show {
@@ -480,7 +479,7 @@ nav > ul > li > a:hover {
 }
 
 
-footer {
+.video {
     background-color: #0d5a5a;
     /* minheight: 50vh; */
     display: flex;
@@ -494,25 +493,25 @@ footer {
     padding: 200px 0;
 }
 
-footer .contact {
+.video .contact {
     display: flex;
     align-items: flex-start;
     opacity: 0;
-    transition: all 1.5s ease;
+    transition: all 1.5s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
-footer > .show {
+.video > .show {
     opacity: 1;
 }
 
-footer .contact div .links div {
+.video .contact div .links div {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-footer .contact > div,
-footer .contact > form {
+.video .contact > div,
+.video .contact > form {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -522,12 +521,12 @@ footer .contact > form {
     width: 400px;
 }
 
-footer .contact div .links div img {
+.video .contact div .links div img {
     width: 20px;
     filter: invert(1);
 }
 
-footer .contact form fieldset {
+.video .contact form fieldset {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -535,20 +534,20 @@ footer .contact form fieldset {
     width: 100%;
 }
 
-footer .contact form fieldset input {
+.video .contact form fieldset input {
     height: 2rem;
     padding: 2px 6px;
     border-radius: 5px;
     border: 1px solid #020617;
 }
 
-footer .contact form fieldset textarea {
+.video .contact form fieldset textarea {
     padding: 2px 6px;
     border-radius: 5px;
     border: 1px solid #020617;
 }
 
-footer .contact form fieldset button {
+.video .contact form fieldset button {
     width: 100px;
     padding: 3px 15px;
     border-radius: 5px;
@@ -574,7 +573,7 @@ footer .contact form fieldset button {
     border-radius: 50%;
 }
 
-footer + div {
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -585,7 +584,7 @@ footer + div {
     font-size: 0.7rem;
 }
 
-.custom-shape-divider-bottom-1702705053 {
+.wave-2 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -595,7 +594,7 @@ footer + div {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1702705053 svg {
+.wave-2 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -603,7 +602,7 @@ footer + div {
     transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1702705053 .shape-fill {
+.wave-2 .shape-fill {
     fill: #020617;
 }
 
@@ -696,6 +695,7 @@ footer + div {
         display: none;
         /* z-index: -5; */
         background-color: #020617;
+        
         flex-direction: column;
         /* opacity: 0; */
         /* transform: translateY(50px) */
@@ -705,7 +705,9 @@ footer + div {
     	display:flex;
     	justify-content: center;
     }
+    
     nav > .showUL {
+        
     	display: flex;
     	/* opacity: 1; */
     	animation: subtleShow 500ms ease;
