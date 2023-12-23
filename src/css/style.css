@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Montserrat&family=Noto+Sans:wght@200&family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:wght@300&family=Roboto:wght@100&family=Signika+Negative:wght@300&display=swap');
 
-/*
-this file is for css styling that are common across different pages 
-like the nav bar and footer
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +31,7 @@ nav {
 
 .show {
     transform: translateY(0);
-    opacity: 1;
+    opacity: .9;
 }
 
 nav .logo {
@@ -89,7 +84,7 @@ nav > ul > li > a:hover {
 .main {
     height: calc(100vh + 60px);
     display: flex;
-    padding-top: 50px;
+    padding-top: 80px;
     justify-content: center;
     align-items: flex-start;
     position: relative;
@@ -100,7 +95,7 @@ nav > ul > li > a:hover {
     box-shadow: 0 0 700px 50px #00ffff8a;
     z-index: -100;
     right: 120px;
-    bottom: 20px;
+    bottom: 150px;
 }
 
 .main > .container {
@@ -206,100 +201,6 @@ nav > ul > li > a:hover {
     /* fill: white; */
 }
 
-.video {
-    background-color: #0d5a5a;
-    /* minheight: 50vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    flex-direction: column;
-    position: relative;
-    gap: 20px;
-    margin-top: 50px;
-    padding: 200px 0;
-}
-
-.video .contact {
-    display: flex;
-    align-items: flex-start;
-    opacity: 0;
-    transition: all 1.5s cubic-bezier(0.6, 0.02, 0.08, 1.03);
-}
-
-.video > .show {
-    opacity: 1;
-}
-
-.video .contact div .links div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.video .contact > div,
-.video .contact > form {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
-    width: 400px;
-}
-
-.video .contact div .links div img {
-    width: 20px;
-    filter: invert(1);
-}
-
-.video .contact form fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: none;
-    width: 100%;
-}
-
-.video .contact form fieldset input {
-    height: 2rem;
-    padding: 2px 6px;
-    border-radius: 5px;
-    border: 1px solid #020617;
-}
-
-.video .contact form fieldset textarea {
-    padding: 2px 6px;
-    border-radius: 5px;
-    border: 1px solid #020617;
-}
-
-.video .contact form fieldset button {
-    width: 100px;
-    padding: 3px 15px;
-    border-radius: 5px;
-    border: 2px solid #fff;
-    background-color: #0d5a5a;
-    color: #fff;
-    /* font-weight: 600; */
-    cursor: pointer;
-}
-
-.icons {
-    width: 300px;
-    height: 50px;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 15px;
-}
-
-.icons > a > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
 footer {
     display: flex;
     flex-direction: column;
@@ -354,9 +255,11 @@ footer {
 @keyframes dash {
 	from {
 		transform: translateX(250px);
+        opacity: 0;
 	}
 	to {
 		transform: translateX(0);
+        opacity: 1;
 	}
 }
 
@@ -439,7 +342,7 @@ footer {
     .main > .container > div {
         margin: 0;
         width: 100%;
-        height: 80%;
+        height: 70%;
         font-size: 1rem;
         align-items: center;
         justify-content: flex-start;
