@@ -1,15 +1,13 @@
 import { observer } from '../js/observer.js';
 
 const nav = document.querySelector('.navBar');
-const mainImg = document.querySelector('.main > .container > img');
-const main = document.querySelector('.main > .container > div');
 const leftCards = document.querySelectorAll('.cardContainer > .left');
 const rightCards = document.querySelectorAll('.cardContainer > .right');
 const videos = document.querySelectorAll('.videoContainer video');
+const flex = document.querySelector('.flex > .container');
 
 observer.observe(nav);
-observer.observe(main);
-observer.observe(mainImg);
+observer.observe(flex);
 leftCards.forEach((card) => observer.observe(card));
 rightCards.forEach((card) => observer.observe(card));
 videos.forEach((video) => observer.observe(video));

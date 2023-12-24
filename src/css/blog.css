@@ -235,6 +235,7 @@ body > .show {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .lessons > .lessonsContainer > div {

@@ -1,5 +1,185 @@
 @import '../css/style.css';
 
+.flex {
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    padding: 120px 0 250px 0;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.flex .container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one one two two three'
+    'four five five six six';
+    gap: 10px;
+    width: 1200px;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.flex > .show {
+    opacity: 1;
+}
+
+.flex .container > div > h4 {
+    font-size: 1.2rem;
+}
+
+.flex .container > div {
+    overflow: hidden;
+    display: flex;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    position: relative;
+    height: 15rem;
+    padding: 20px;
+}
+
+.flex .container > div:nth-child(1) {
+    grid-area: one;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.flex .container > div:nth-child(1) > a{
+    text-decoration: none;
+    color: aqua;
+    font-size: 1rem;
+    position: relative;
+    width: fit-content;
+}
+.flex .container > div:nth-child(1) > p {
+    font-size: 0.9rem;
+}
+.flex .container > div:nth-child(1) > a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    color: aqua;
+    opacity: 0;
+    transition: width 0.3s ease;
+}
+
+.flex .container > div:nth-child(1) > a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+.flex .container > div:nth-child(1) > .blur8 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    left: -20px;
+}
+
+
+.flex .container > div:nth-child(2) {
+    grid-area: two;
+    padding: 40px;
+}
+.flex .container > div:nth-child(2) > img {
+    width: 380px;
+    position: absolute;
+    bottom: -30px;
+    right: -8px;
+    border-radius: 8px;
+}
+.flex .container > div:nth-child(2) > .blur3 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    bottom: 100px;
+    left: 150px;
+}
+
+
+.flex .container > div:nth-child(3) {
+    grid-area: three;
+}
+.flex .container > div:nth-child(3) > img {
+    width: 150px;
+    position: absolute;
+    bottom: -20px;
+    right: -8px;
+    border-radius: 8px;
+}
+.flex .container > div:nth-child(3) > .blur7 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    top: 150px;
+    left: 200px;
+}
+
+
+.flex .container > div:nth-child(4) {
+    grid-area: four;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.flex .container > div:nth-child(4) > img {
+    width: 180px;
+    position: absolute;
+    bottom: -60px;
+    left: -10px;
+    border-radius: 8px;
+}
+.flex .container > div:nth-child(4) > .blur6 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    top: 150px;
+    right: 150px;
+}
+
+
+.flex .container > div:nth-child(5) {
+    grid-area: five;
+    justify-content: flex-end;
+    padding: 20px 70px;
+}
+.flex .container > div:nth-child(5) > img {
+    width: 500px;
+    position: absolute;
+    bottom: -70px;
+    left: -120px;
+    border-radius: 8px;
+}
+.flex .container > div:nth-child(5) > .blur5 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    top: 180px;
+    right: 150px;
+}
+
+
+.flex .container > div:nth-child(6) {
+    grid-area: six;
+    justify-content: center;
+}
+.flex .container > div:nth-child(6) > img {
+    width: 300px;
+    position: absolute;
+    border-radius: 8px;
+    bottom: -230px; 
+}
+.flex .container > div:nth-child(6) > .blur4 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    top: 180px;
+}
+
 .projects {
     height: fit-content;
     color: #fff;
@@ -82,12 +262,26 @@
     text-decoration: none;
     color: aqua;
     border-radius: 8px;
+    position: relative;
     transition: all 0.2s ease;
 }
 
-.projects > .cardContainer > .card > a:hover {
-    border: 1px solid aqua;
-    
+.projects > .cardContainer > .card > a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    color: aqua;
+    opacity: 0;
+    transition: width 0.3s ease;
+}
+
+.projects > .cardContainer > .card > a:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .video {
@@ -115,7 +309,7 @@
 }
 
 .video .videoContainer div video {
-    width: 250px;
+    width: 200px;
     position: relative;
     border-radius: 10px;
     box-shadow: 4px 5px 16px rgb(0, 0, 0, 0.8);
@@ -132,9 +326,59 @@
     padding: 10px 0 40px 0;
 }
 
+.wave-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.wave-1 svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 110px;
+}
+
+.wave-1 .shape-fill {
+    fill: #020617;
+}
+
+.wave-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 81px;
+    transform: rotateY(180deg);
+}
+
+.wave-2 .shape-fill {
+    fill: #020617;
+}
 
 @media (max-width: 600px) {
+    .flex .container {
+        width: 90%;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six';
+    }
     .projects > .cardContainer {
         grid-template-columns: repeat(1, minmax(300px, 1fr));
         width: 100%;
