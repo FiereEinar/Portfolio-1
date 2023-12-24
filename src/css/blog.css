@@ -402,4 +402,18 @@ body > .show {
     .tree .gridContainer > div {
         height: 250px;
     }
+
+    .lessons > .blogIntro,
+    .lessons > .lessonsContainer > div {
+        width: 90%;
+
+    }
+
+    .lessons > .lessonsContainer > div > div {
+        flex-direction: column;
+    }
+
+    .lessons > .lessonsContainer > div > div img {
+        width: 100%;
+    }
 }

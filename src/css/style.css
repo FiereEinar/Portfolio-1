@@ -223,13 +223,24 @@ nav > ul > li > a:hover {
 
 footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: fit-content;
     color: #fff;
     padding: 20px;
     font-size: 0.7rem;
+    gap: 15px;
+}
+
+footer .footerSocials {
+    display: flex;
+    gap: 8px;
+    height: fit-content;
+}
+
+footer .footerSocials a img {
+    width: 20px;
+    border-radius: 50%;
 }
 
 .wave-2 {
@@ -376,23 +387,5 @@ footer {
         padding: 0;
         width: 60%;
         height: 30%;
-    }
-    footer .contact {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    footer > .contact > div {
-        align-items: center;
-    }
-    footer > .contact > div > div {
-        justify-content: center;
-    }
-    footer > .contact > div,
-    footer > .contact >form {
-        width: 100%;
-    }
-    footer > .contact > form > h1 {
-        width: 100%;
-        text-align: center;
     }
 }
