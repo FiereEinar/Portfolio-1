@@ -75,10 +75,30 @@ nav > ul > li {
 nav > ul > li > a {
     text-decoration: none;
     color: #fff;
+    position: relative;
+}
+
+nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    color: aqua;
+    opacity: 0;
+    transition: width 0.3s ease;
+}
+
+nav > ul > li > a:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 nav > ul > li > a:hover {
     color: aqua;
+
 }
 
 .main {

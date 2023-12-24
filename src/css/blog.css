@@ -160,6 +160,205 @@ body > .show {
     z-index: -100;
 }
 
+.lessons {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lessons > .blogIntro {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40vh 0;
+    opacity: 0;
+    position: relative;
+    transition: all var(--delay) ease;
+}
+
+.lessons > .show {
+    opacity: 1;
+}
+
+.lessons > .blogIntro > .blur4 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    animation: triangularMove 20s linear infinite;
+}
+
+.lessons > .blogIntro > .blur5 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    animation: linearMove 20s linear infinite;
+}
+
+.lessons > .blogIntro a {
+    text-decoration: none;
+    color: aqua;
+    width: fit-content;
+    position: relative;
+}
+
+.lessons > .blogIntro a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    color: aqua;
+    opacity: 0;
+    transition: width 0.3s ease;
+}
+
+.lessons > .blogIntro a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.lessons > .lessonsContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lessons > .lessonsContainer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    position: relative;
+}
+
+.lessons > .lessonsContainer > div > .blur6 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    top: 250px;
+    left: 0;
+}
+
+.lessons > .lessonsContainer > div > .blur7 {
+    position: absolute;
+    box-shadow: 0 0 1200px 50px #00ffff8a;
+    z-index: -100;
+    bottom: 250px;
+    right: 0;
+}
+
+.lessons > .lessonsContainer > div > div {
+    display: flex;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    gap: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1.5s cubic-bezier(0.6, 0.02, 0.08, 1.03);
+}
+
+.lessons > .lessonsContainer > div > .left {
+    transform: translateX(-200px);
+}
+.lessons > .lessonsContainer > div > .right {
+    transform: translateX(200px);
+}
+
+.lessons > .lessonsContainer > div > .show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.lessons > .lessonsContainer > div > div img {
+    width: 300px;
+    border-radius: 5px;
+}
+
+/* so much div, this is for the container of the text next to the images in the lessons section */
+.lessons > .lessonsContainer > div > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lessons > .lessonsContainer > div > div > div a {
+    text-decoration: none;
+    color: aqua;
+    position: relative;
+    width: fit-content;
+}
+
+.lessons > .lessonsContainer > div > div > div a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    color: aqua;
+    opacity: 0;
+    transition: width 0.3s ease;
+}
+
+.lessons > .lessonsContainer > div > div > div a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+@keyframes triangularMove {
+    0%, 100% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: 100px;
+        top: 100px;
+    }
+    50% {
+        left: 0;
+        top: 200px;
+    }
+    75% {
+        left: -100px;
+        top: 100px;
+    }
+}
+
+@keyframes linearMove {
+    0%, 100% {
+        right: 0;
+        bottom: 150px;
+    }
+    25% {
+        right: 0;
+        bottom: 0;
+    }
+    50% {
+        right: 150px;
+        bottom: 0;
+    }
+    75% {
+        right: 0;
+        bottom: 0;
+    }
+}
+
 @media (max-width: 600px) {
     .pe {
         padding: 20px;
