@@ -124,7 +124,7 @@
 .flex .container > div:nth-child(4) {
     grid-area: four;
     justify-content: flex-end;
-    padding: 20px;
+    padding-right: 50px;
 }
 .flex .container > div:nth-child(4) > img {
     width: 180px;
@@ -199,19 +199,22 @@
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     width: 100%;
     padding: 0 20%;
+    gap: 20px;
     position: relative;
     overflow: hidden;
 }
 
 .projects > .cardContainer > .card {
     border-top: 2px solid aqua;
-    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: fit-content;
+    padding-bottom: 20px;
     overflow: hidden;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
     transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
@@ -244,7 +247,7 @@
     right: 20px;
 }
 
-.projects > .cardContainer > .card > *:not(img) {
+.projects > .cardContainer > .card > h4, p {
     padding: 8px 15px;
 }
 
@@ -258,10 +261,9 @@
 }
 
 .projects > .cardContainer > .card > a {
-    border: 1px solid #020617;
+    margin-left: 15px;
     text-decoration: none;
     color: aqua;
-    border-radius: 8px;
     position: relative;
     transition: all 0.2s ease;
 }
@@ -289,7 +291,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #fff;
     flex-direction: column;
     position: relative;
     margin-top: 50px;
@@ -381,7 +383,7 @@
     }
     .projects > .cardContainer {
         grid-template-columns: repeat(1, minmax(300px, 1fr));
-        width: 100%;
+        width: 90%;
         padding: 0;
     }
     .projects {
