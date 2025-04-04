@@ -31,13 +31,13 @@ setTimeout(() => {
 	let textSwitch = false;
 	let word;
 
-	typeToScreen('a 1st year College Student');
+	typeToScreen('a 2nd year College Student');
 
 	const textInterval = setInterval(() => {
 		textSwitch = !textSwitch;
 		textSwitch ?
 			word = 'an aspiring Full Stack Developer' :
-			word = 'a 1st year College Student';
+			word = 'a 2nd year College Student';
 
 		typeToScreen(word);
 	}, 7500);
