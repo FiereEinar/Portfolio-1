@@ -13,12 +13,18 @@ observer.observe(nav);
 observer.observe(imgsContainer);
 observer.observe(details);
 
-const navButton = document.querySelector('.navButton');
-const ul = document.querySelector('.navBar > ul');
+// const navButton = document.querySelector('.navButton');
+// const ul = document.querySelector('.navBar > ul');
 
-navButton.addEventListener('click', () => {
-	ul.classList.toggle('showUL');
-});
+// navButton.addEventListener('click', () => {
+// 	ul.classList.toggle('showUL');
+// });
+
+const leftCards = document.querySelectorAll('.cardContainer > .left');
+const rightCards = document.querySelectorAll('.cardContainer > .right');
+
+leftCards.forEach((card) => observer.observe(card));
+rightCards.forEach((card) => observer.observe(card));
 
 
 setTimeout(() => {

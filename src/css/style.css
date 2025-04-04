@@ -3,66 +3,66 @@
 /* this file contains css that are common across different pages like nav and footer */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
 
 body {
-    background-color: #020617;
-    position: relative;
+	background-color: #020617;
+	position: relative;
 }
 
 nav {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    background-color: #020617;
-    position: fixed;
-    padding: 20px 60px;
-    transform: translateY(-40px);
-    opacity: 0;
-    z-index: 100;
-    transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	background-color: #020617;
+	position: fixed;
+	padding: 20px 60px;
+	transform: translateY(-40px);
+	opacity: 0;
+	z-index: 100;
+	transition: all 1s cubic-bezier(0.6, 0.02, 0.08, 1.03);
 }
 
 .show {
-    transform: translateY(0);
-    opacity: .9;
+	transform: translateY(0);
+	opacity: 0.9;
 }
 
 nav .logo {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-    gap: 8px;
+	gap: 8px;
 }
 
 nav .logo > img {
 	width: 30px;
 	height: 30px;
-    filter: invert(1);
+	filter: invert(1);
 }
 
 nav .logo + div {
 	display: none;
 }
 
-nav .logo + div > img { 
+nav .logo + div > img {
 	width: 25px;
 	height: 25px;
-    filter: invert(1);
-    cursor: pointer;
+	filter: invert(1);
+	cursor: pointer;
 }
 
 nav > ul {
-    display: flex;
-    gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 nav > ul > li .active {
@@ -70,63 +70,60 @@ nav > ul > li .active {
 }
 
 nav > ul > li {
-    list-style: none;
-    cursor: pointer;
+	list-style: none;
+	cursor: pointer;
 }
 
 nav > ul > li > a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
 }
 
 nav > ul > li > a::after {
-    content: '';
-    position: absolute;
-    background-color: aqua;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    color: aqua;
-    opacity: 0;
-    transition: width 0.3s ease;
+	content: '';
+	position: absolute;
+	background-color: aqua;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	color: aqua;
+	opacity: 0;
+	transition: width 0.3s ease;
 }
 
 nav > ul > li > a:hover::after {
-    width: 100%;
-    opacity: 1;
+	width: 100%;
+	opacity: 1;
 }
 
 nav > ul > li > a:hover {
-    color: aqua;
-
+	color: aqua;
 }
 
-
-
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    color: #fff;
-    padding: 20px;
-    font-size: 0.7rem;
-    gap: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+	color: #fff;
+	padding: 20px;
+	font-size: 0.7rem;
+	gap: 15px;
 }
 
 footer .footerSocials {
-    display: flex;
-    gap: 8px;
-    height: fit-content;
+	display: flex;
+	gap: 8px;
+	height: fit-content;
 }
 
 footer .footerSocials a img {
-    width: 20px;
-    border-radius: 50%;
+	width: 20px;
+	border-radius: 50%;
 }
-  
+
 @keyframes subtleShow {
 	from {
 		opacity: 0;
@@ -137,35 +134,34 @@ footer .footerSocials a img {
 }
 
 @media (max-width: 600px) {
-    nav {
-        justify-content: center;
-        padding: 20px 20px;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-    nav .logo {
-        width: 80%;
-    }
-    nav > ul {
-        margin: 0;
-        padding: 25px 0 0 0;
-        display: none;
-        background-color: #020617;
-        flex-direction: column;
-    }
-    nav > ul li {
-    	display:flex;
-    	justify-content: center;
-    }
-    
-    nav > .showUL {
-    	display: flex;
-    	animation: subtleShow 500ms ease;
-    }
-    nav .logo + div {
-    	display: flex;
-    	width: 20%;
-    	justify-content: flex-end;
-    }
-    
+	nav {
+		justify-content: center;
+		padding: 20px 20px;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	nav .logo {
+		width: 80%;
+	}
+	nav > ul {
+		margin: 0;
+		padding: 25px 0 0 0;
+		display: none;
+		background-color: #020617;
+		flex-direction: column;
+	}
+	nav > ul li {
+		display: flex;
+		justify-content: center;
+	}
+
+	nav > .showUL {
+		display: flex;
+		animation: subtleShow 500ms ease;
+	}
+	nav .logo + div {
+		display: flex;
+		width: 20%;
+		justify-content: flex-end;
+	}
 }
